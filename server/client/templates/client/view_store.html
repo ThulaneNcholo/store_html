@@ -1,0 +1,211 @@
+{% extends 'client/base.html' %}
+<!-- divider  -->
+{% block content %}
+
+<style>
+  .headers {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 0px;
+  }
+
+  /* .table-component {
+    border-radius: 7px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  } */
+
+  .table-icons {
+    font-size: 22px;
+  }
+
+  .align-items-items {
+    align-items: baseline;
+  }
+</style>
+
+<main class="container mx-4">
+  <h1>Store Name</h1>
+
+  <!-- Store hero component start  -->
+  <section class="store-card px-3 py-5">
+    <p class="headers">Description</p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non sed, iste
+      quas eaque voluptatum animi veniam quidem tempora minima veritatis quo
+      facere magni ducimus. Eaque quidem necessitatibus cupiditate ex saepe?
+    </p>
+    <p class="headers">Adreess</p>
+    <p>12 Main Street</p>
+    <p class="headers">City</p>
+    <p>Brakpan</p>
+    <p class="headers">province</p>
+    <p>Gauteng</p>
+    <p class="headers">Postal Code</p>
+    <p>1525</p>
+    <p class="headers">Contact Person</p>
+    <p>Jane Doe</p>
+    <p class="headers">Contact Number</p>
+    <p>011 736 8383</p>
+    <p class="headers">Email</p>
+    <p>jane@gmail.com</p>
+  </section>
+
+  <!-- Store Inventory start  -->
+  <!-- table start  -->
+  <section class="container mt-5 table-component">
+    <div class="row mb-4">
+      <div class="col">
+        <h4>Inventory</h4>
+      </div>
+      <div class="col">
+        <button
+          class="btn btn-secondary"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Item
+        </button>
+      </div>
+    </div>
+
+    <!-- add inventory modal  -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Add Inventory Item
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body py-3 px-2">
+            <form>
+              <div class="form-floating mb-3 bg-light">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ItemCode"
+                  placeholder="Item Code"
+                />
+                <label for="floatingInput">Item Code</label>
+              </div>
+              <div class="form-floating mb-3 bg-light">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Description"
+                  placeholder="Description"
+                />
+                <label for="floatingDescription">Description</label>
+              </div>
+              <div class="form-floating mb-3 bg-light">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Cost"
+                  placeholder="Cost"
+                />
+                <label for="floatingCost">Cost</label>
+              </div>
+              <div class="form-floating mb-3 bg-light">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Price"
+                  placeholder="Price"
+                />
+                <label for="floatingPrice">Price</label>
+              </div>
+              <div class="form-floating mb-3 bg-light">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Quantity"
+                  placeholder="Quantity"
+                />
+                <label for="floatingQuantity">Quantity</label>
+              </div>
+              <div class="form-floating mb-3 bg-light">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Store Id"
+                  placeholder="Store Id"
+                />
+                <label for="floatingStore Id">Store Id</label>
+              </div>
+              <div class="form-floating mb-3 bg-light">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="User Id"
+                  placeholder="User Id"
+                />
+                <label for="floatingUser Id">User Id</label>
+              </div>
+              <center>
+                <button class="btn btn-primary my-4" style="width: 100%">
+                  Submit Inventory
+                </button>
+              </center>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="row px-0 mx-0 py-3 table-row-style align-items-items">
+      <div class="col-1">
+        <i class="bi bi-box-seam table-icons text-primary"></i>
+      </div>
+      <div class="col">item_code</div>
+      <div class="col">
+        item_description Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Sed id itaque expedita facere ipsa qui.
+      </div>
+      <div class="col">cost</div>
+      <div class="col">price</div>
+      <div class="col">quantity</div>
+      <div class="col">
+        <a href="{% url 'view-inventory'%}">
+          <button class="btn btn-primary">view</button>
+        </a>
+      </div>
+    </div>
+    <hr />
+    <div class="row px-0 mx-0 py-3 table-row-style align-items-items">
+      <div class="col-1">
+        <i class="bi bi-box-seam table-icons text-primary"></i>
+      </div>
+      <div class="col">item_code</div>
+      <div class="col">
+        item_description Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Sed id itaque expedita facere ipsa qui.
+      </div>
+      <div class="col">cost</div>
+      <div class="col">price</div>
+      <div class="col">quantity</div>
+      <div class="col">
+        <button class="btn btn-primary">view</button>
+      </div>
+    </div>
+    <hr />
+  </section>
+</main>
+
+{% endblock %}

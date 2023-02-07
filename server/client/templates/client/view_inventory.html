@@ -1,0 +1,73 @@
+{% extends 'client/base.html' %}
+<!-- divider  -->
+{% block content %}
+
+<style>
+  .labels {
+    color: grey;
+  }
+</style>
+
+<main class="container mx-4">
+  <section>
+    <ul class="list-group">
+      <li class="list-group-item py-3">
+        <div class="row">
+          <div class="col labels">ID</div>
+          <div class="col">53</div>
+        </div>
+      </li>
+      <li class="list-group-item py-3">
+        <div class="row">
+          <div class="col labels">Item Code</div>
+          <div class="col">hdfuhdfueu</div>
+        </div>
+      </li>
+      <li class="list-group-item py-3">
+        <div class="row">
+          <div class="col labels">Item Description</div>
+          <div class="col">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quod
+            iure minus autem doloremque expedita et perspiciatis nostrum dolorum
+            sunt!
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item py-3">
+        <div class="row">
+          <div class="col labels">Cost Price</div>
+          <div class="col">R300.00</div>
+        </div>
+      </li>
+      <li class="list-group-item py-3">
+        <div class="row">
+          <div class="col labels">Price</div>
+          <div class="col">R500.00</div>
+        </div>
+      </li>
+      <li class="list-group-item py-3">
+        <div class="row">
+          <div class="col labels">Store ID</div>
+          <div class="col">63</div>
+        </div>
+      </li>
+      <li class="list-group-item py-3">
+        <div class="row">
+          <div class="col labels">User ID</div>
+          <div class="col">63</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="row mt-5">
+      <div class="col">
+        <button class="btn btn-primary py-3" style="width: 100%">Update</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-danger py-3" style="width: 100%">Delete</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
